@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ログイン - 案件管理システム</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sp.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>案件管理システム</h1>
+    </header>
+    <main>
+      <section class="form-section" style="max-width: 400px; margin: 0 auto;">
+        <div id="loginForm" class="auth-form">
+          <h2>ログイン</h2>
+          <fieldset class="fieldset-group">
+            <div class="form-group">
+              <label for="loginEmail">メールアドレス</label>
+              <input type="email" id="loginEmail" required>
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">パスワード</label>
+              <input type="password" id="loginPassword" required>
+            </div>
+            <div class="form-group btn-group">
+              <button id="loginBtn" class="auth-btn submit-btn">ログイン</button>
+            </div>
+            <p id="loginError" class="error-message"></p>
+            <p>アカウントをお持ちでない方は <a href="#" id="showRegister">こちら</a></p>
+          </fieldset>
+        </div>
+        <div id="registerForm" class="auth-form" style="display: none;">
+          <h2>新規登録</h2>
+          <fieldset class="fieldset-group">
+            <div class="form-group">
+              <label for="registerEmail">メールアドレス</label>
+              <input type="email" id="registerEmail" required>
+            </div>
+            <div class="form-group">
+              <label for="registerPassword">パスワード</label>
+              <input type="password" id="registerPassword" required>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">パスワード（確認）</label>
+              <input type="password" id="confirmPassword" required>
+            </div>
+            <div class="form-group btn-group">
+              <button id="registerBtn" class="auth-btn submit-btn">登録</button>
+            </div>
+            <p id="registerError" class="error-message"></p>
+            <p>既にアカウントをお持ちの方は <a href="#" id="showLogin">こちら</a></p>
+          </fieldset>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>

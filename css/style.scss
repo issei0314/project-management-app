@@ -1,0 +1,174 @@
+/* 色設定 */
+$primary: #1976d2;
+$accent: #43a047;
+$error: #e53935;
+$bg: #f6f8fa;
+$white: #fff;
+$border: #e0e0e0;
+$radius: 10px;
+$shadow: 0 4px 16px rgba(0,0,0,0.08);
+
+/* ベースレイアウト */
+body {
+  background: $bg;
+  font-family: 'Segoe UI', 'Meiryo', sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: $white;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: 32px;
+}
+
+header {
+  h1 {
+    text-align: center;
+    color: $primary;
+    margin-bottom: 24px;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+  }
+}
+
+main {
+  .form-section, .list-section {
+    margin-bottom: 32px;
+  }
+
+  h2 {
+    color: $primary;
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+
+.fieldset-group {
+  border: 1px solid $border;
+  border-radius: $radius;
+  margin-bottom: 24px;
+  padding: 18px 20px 12px 20px;
+  background: #f9fbfd;
+
+  legend {
+    font-weight: bold;
+    color: $primary;
+    padding: 0 8px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+
+  label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #444;
+  }
+
+  input, select, textarea {
+    padding: 8px;
+    border: 1px solid $border;
+    border-radius: 4px;
+    font-size: 1em;
+    background: #fafafa;
+    transition: border-color 0.2s;
+    &:focus {
+      border-color: $primary;
+      outline: none;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 40px;
+    max-height: 120px;
+  }
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+
+  button {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: background 0.2s, box-shadow 0.2s;
+
+    &.submit-btn {
+      background: $primary;
+      color: $white;
+      &:hover { background: darken($primary, 8%); }
+    }
+    &.update-btn {
+      background: $accent;
+      color: $white;
+      &:hover { background: darken($accent, 8%); }
+    }
+    &.cancel-btn {
+      background: $error;
+      color: $white;
+      &:hover { background: darken($error, 8%); }
+    }
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+  background: $white;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: $white;
+  font-size: 1em;
+
+  th, td {
+    padding: 10px 8px;
+    border-bottom: 1px solid $border;
+    text-align: left;
+  }
+
+  th {
+    background: #e3f2fd;
+    color: $primary;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  tr {
+    &:hover {
+      background: #f1f8e9;
+      transition: background 0.2s;
+    }
+  }
+}
+
+.loading {
+  color: $primary;
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
